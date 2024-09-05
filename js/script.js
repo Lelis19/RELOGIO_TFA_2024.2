@@ -4,14 +4,14 @@ const segundos = document.getElementById("segundos")
 
 function time() {
     const dataAtual = new Date()
-    const hora = dataAtual.getHours()
-    const minuto = dataAtual.getMinutes()
-    const segundo = dataAtual.getSeconds()
+    const hora = dataAtual.getHours().toString().padStart(2, "0")
+    const minuto = dataAtual.getMinutes().toString().padStart(2, "0")
+    const segundo = dataAtual.getSeconds().toString().padStart(2, "0")
 
     horas.textContent = hora;
     minutos.textContent = minuto;
     segundos.textContent = segundo;
-    
+
     console.log(dataAtual)
 }
 
